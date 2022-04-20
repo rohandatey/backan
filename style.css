@@ -1,0 +1,85 @@
+
+  /* log in screen css*/ 
+   * {
+        margin: 0;
+        padding: 0;
+
+    }
+  
+    
+    body {
+
+        background-image: url("images/spaghetti-g00646c086_1920.jpg");
+     
+    }
+   
+   
+
+    .logincontainer{
+        /* border: 2px solid red; */
+        /* margin: 164px -102px; */
+        margin: 170px 0px;
+        padding: 72px 24px;
+      
+          /*use row/coloam    */
+        display: block;
+        border-radius: 30px;
+        justify-content: center;
+        /* box-shadow: 0px 0px 20px #00000010; */
+        background-color:dimgrey;
+        border-radius: 35px;
+        /* opacity: 0.5; */
+        opacity: 0.9;
+    }
+     .formgroup input {
+        display: inline-block;
+        width: 340px;
+        padding: 2px;
+        /* border: 2px solid green; */
+        margin: 1px;
+        border-radius: 5px;
+        font-size: 16px;
+        /* opacity: 0.5; */
+        opacity: 0.9;
+       
+    }
+
+    .container h1 {
+        text-align: center;
+    }
+    
+    /* for button */
+    .container button {
+        display:block;
+        width: 90px;
+        margin: auto; 
+        border-radius: 9px;
+        color: white;
+        /* background-color: blue; */
+        font-size: 20px;
+        cursor: pointer;
+        
+
+    }
+    /* .formgroup i{
+        position:absolute;
+        padding: 8px;
+        font-size: 20px;
+        background-color: gray;
+        color: white;
+        font-size: 20px;
+        text-align: center;
+        line-height: 40px;
+         width: 10%; 
+      
+    } */
+
+    h1 {
+        color: white;
+    }
+    a{
+        color: aliceblue;
+    }
+  
+  /* end oflog in screen css*/ 
+ 

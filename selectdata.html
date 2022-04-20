@@ -1,0 +1,141 @@
+<html>
+  <head>
+    <title>select</title>
+  </head>
+  <style>
+        * {
+            margin: 0px auto;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+           
+        }
+
+        .table tr,
+        table td {
+            margin: 10px 12px;
+            padding: 10px 15px;
+            border: 2px solid black;
+            text-align: center;
+            font-size: 1.2rem;
+            /* background-color: yellow;
+            color: aliceblue; */
+            
+
+        }
+        h2{
+          text-align: center;
+        }
+    </style>
+<h2>User Table</h2>
+  <body>
+    <table border="2">
+  <tr>
+    <th>S.No</th>
+    <th>Name</th>
+    <th>UserName</th>
+    <th>E-mail</th>
+  </tr>
+
+<?php
+
+include 'connection.php';
+$sql = "select name,username,email,phone_verified_at  from users";
+$result = mysqli_query($con, $sql);
+
+if (mysqli_num_rows($result) > 0) {
+  // output data of each row
+  while($row = mysqli_fetch_assoc($result)) {
+
+    echo"
+
+    <tr>
+  <td>".$row['name']."</td>
+  <td>".$row['username']."</td>
+  <td>".$row['email']."</td>
+  <td>".$row['phone_verified_at']."</td>
+  </tr>
+  ";
+
+
+
+  }
+} else {
+  echo "0 results";
+}
+
+mysqli_close($con);
+  
+?>
+</table>
+</body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="user.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .table tr,
+        table td {
+            margin: 10px 12px;
+            padding: 10px 15px;
+            border: 2px solid black;
+            text-align: center;
+            font-size: 1.2rem;
+
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <h2>user table</h2>
+        <tr>
+            <td>s.no</td>
+            <td>name</td>
+            <td>username</td>
+            <td>e-mail</td>
+            <td>ph.no</td>
+            <td>is verified</td>
+        </tr>
+        <?php
+        
+        while($result=mysql_fetch_assoc($users))
+        {
+            ?>
+            <tr>
+                <td><?php echo $rows['s.no']?></td>
+                <td><?php echo $rows['name']?></td>
+                <td><?php echo $rows['username']?></td>
+                <td><?php echo $rows['e-mail']?></td>
+                <td><?php echo $rows['ph.no']?></td>
+                <td><?php echo $rows['is verified']?></td>
+            </tr>
+            <?php
+            }
+            ?>
+    </table>
+</body>
+
+</html> -->
